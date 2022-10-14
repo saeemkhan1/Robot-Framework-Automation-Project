@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.0 on darwin)" generated="20221009 11:02:17.842" rpa="false" schemaversion="3">
+<suite id="s1" name="eBay Verify SearchFunctionality" source="/Users/saeemkhan/pythonProject/RobotFrameworkProject/Tests/Google/FunctionalTestSuite/eBay_Verify_SearchFunctionality.robot">
+<test id="s1-t1" name="Verify Basic Search Functionality" line="13">
+<kw name="Launch the Website" library="CommonSteps" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.ebay.com.au</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221009 11:02:18.535" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com.au'.</msg>
+<status status="PASS" starttime="20221009 11:02:18.535" endtime="20221009 11:02:22.795"/>
+</kw>
+<status status="PASS" starttime="20221009 11:02:18.534" endtime="20221009 11:02:22.796"/>
+</kw>
+<kw name="Input Search Text and Click Search" library="1_HeaderPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@id='gh-ac']</arg>
+<arg>${input_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221009 11:02:22.801" level="INFO">Typing text 'mobile' into text field 'xpath://input[@id='gh-ac']'.</msg>
+<status status="PASS" starttime="20221009 11:02:22.799" endtime="20221009 11:02:23.069"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://input[@id='gh-btn']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221009 11:02:23.070" level="INFO">Clicking button 'xpath://input[@id='gh-btn']'.</msg>
+<status status="PASS" starttime="20221009 11:02:23.069" endtime="20221009 11:02:26.032"/>
+</kw>
+<status status="PASS" starttime="20221009 11:02:22.798" endtime="20221009 11:02:26.032"/>
+</kw>
+<kw name="Verify Search Results" library="2_SearchResultPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${page_contain} ${input_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221009 11:02:26.077" level="INFO">Current page contains text 'results for mobile'.</msg>
+<status status="PASS" starttime="20221009 11:02:26.034" endtime="20221009 11:02:26.077"/>
+</kw>
+<status status="PASS" starttime="20221009 11:02:26.033" endtime="20221009 11:02:26.077"/>
+</kw>
+<kw name="Browser is Closed" library="CommonSteps" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221009 11:02:26.078" endtime="20221009 11:02:26.261"/>
+</kw>
+<status status="PASS" starttime="20221009 11:02:26.078" endtime="20221009 11:02:26.261"/>
+</kw>
+<doc>eBay Basic Search Functionality</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20221009 11:02:18.533" endtime="20221009 11:02:26.261"/>
+</test>
+<test id="s1-t2" name="Verify Advanced Search Link" line="21">
+<kw name="Launch the Website" library="CommonSteps" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.ebay.com.au</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221009 11:02:26.268" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com.au'.</msg>
+<status status="PASS" starttime="20221009 11:02:26.267" endtime="20221009 11:02:29.774"/>
+</kw>
+<status status="PASS" starttime="20221009 11:02:26.266" endtime="20221009 11:02:29.775"/>
+</kw>
+<kw name="Verify Advanced Search Link" library="1_HeaderPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@id='gh-as-a']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221009 11:02:29.779" level="INFO">Clicking element 'xpath://a[@id='gh-as-a']'.</msg>
+<status status="PASS" starttime="20221009 11:02:29.777" endtime="20221009 11:02:31.342"/>
+</kw>
+<status status="PASS" starttime="20221009 11:02:29.776" endtime="20221009 11:02:31.342"/>
+</kw>
+<kw name="Browser is Closed" library="CommonSteps" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221009 11:02:31.343" endtime="20221009 11:02:31.502"/>
+</kw>
+<status status="PASS" starttime="20221009 11:02:31.342" endtime="20221009 11:02:31.503"/>
+</kw>
+<doc>eBay Advanced Search Functionality</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20221009 11:02:26.265" endtime="20221009 11:02:31.503"/>
+</test>
+<doc>eBay Basic Search Functionality</doc>
+<status status="PASS" starttime="20221009 11:02:17.846" endtime="20221009 11:02:31.505"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="eBay Verify SearchFunctionality">eBay Verify SearchFunctionality</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
